@@ -19,4 +19,7 @@ public class MissileLauncher extends MovableObject{
 		else
 			super.setDirection(direction-36);
 	}
+	public String toString() {
+		return "[Missile        |Location: "+super.getLoc()+"|Color: "+super.getColor()+"|Speed: "+super.getSpeed()+"|Direction "+super.getDirection()+"]";
+	}
 }

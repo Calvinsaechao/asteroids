@@ -3,13 +3,13 @@ package com.calvinsaechao.cs;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.ui.geom.Point2D;
 
-public class PlayerShip extends MovableObject{
+public class PlayerShip extends MovableObject implements ISteerable{
 	private int missileCount;
 	private MissileLauncher missileLauncher;
 	
 	public PlayerShip() {
 		super.setColor(ColorUtil.WHITE);
-		super.setLoc(new Point2D(512,384));
+		super.setLoc(new Point2D(GameWorld.getWidth()/2,GameWorld.getHeight()/2));
 		super.setDirection(0);
 		super.setSpeed(0);
 		missileCount = 10;
@@ -78,6 +78,6 @@ public class PlayerShip extends MovableObject{
 	}
 	public String toString() {
 		return "[PlayerShip     |Location: "+super.getLoc()+"|Color: "+super.getColor()+"|Speed: "+super.getSpeed()+"|Direction "+super.getDirection()
-				+ "|Missile Count: "+missileCount+"]";
+				+ "|Missile Count: "+missileCount+"]" + "\n\t" + this.getMissileLauncher().toString();
 	}
 }
