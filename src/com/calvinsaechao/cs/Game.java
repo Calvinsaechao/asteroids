@@ -35,7 +35,6 @@ import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.Border;
-import com.mycompany.a2.commands.*;
 
 public class Game extends Form{
 	private GameWorld gw;
